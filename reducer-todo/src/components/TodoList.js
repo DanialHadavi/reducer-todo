@@ -10,20 +10,22 @@ export default function TodoList(props) {
   console.log(props.state.todoList);
 
   return (
-    <div className="todo-list">
+    <table className="todo-list">
       {props.state.todoList.map((todo) => (
-        <div
+        <tr
           key={todo.id}
           style={{
             color: !todo.completed ? "red" : "green",
             textDecorationLine: todo.completed ? "line-through" : "",
           }}
         >
-          {todo.name}
-          <button onClick={markTodo(todo.id, true)}>complete</button>
-          <button onClick={markTodo(todo.id, false)}>incomplete</button>
-        </div>
+          <td> {todo.name}</td>
+          <td>
+            <button onClick={markTodo(todo.id, true)}>complete</button>
+            <button onClick={markTodo(todo.id, false)}>incomplete</button>
+          </td>
+        </tr>
       ))}
-    </div>
+    </table>
   );
 }

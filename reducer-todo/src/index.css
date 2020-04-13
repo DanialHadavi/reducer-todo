@@ -30,6 +30,7 @@ span {
   padding: 0 30px;
   max-width: 600px;
   margin: 0 auto;
+  table-layout: fixed;
 }
 
 .top {
@@ -39,6 +40,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 60px;
 }
 @media (max-width: 500px) {
   .top {
@@ -114,13 +116,24 @@ input::placeholder {
   opacity: 1;
 }
 
-.clear-button {
-  margin: 40px;
-}
 .submit {
+  margin: 5px;
   padding: 6px 14px;
 }
 
 label {
   margin: 10px;
+}
+
+.todo-list td:nth-child(1) {
+  width: 60%;
+}
+
+.my-form {
+  margin-left: 230px;
+  width: 30%;
+}
+.my-btn {
+  margin-right: 200px;
+  margin-left: 155px;
 }

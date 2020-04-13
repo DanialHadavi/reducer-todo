@@ -29,25 +29,25 @@ export default function Form(props) {
 
   return (
     <div className="form-top">
-      <form onSubmit={onFormSubmit}>
-        <label>Task: </label>
-        <input
-          type="text"
-          name="name"
-          value={props.state.todoValue}
-          onChange={onValueChange}
-        />
+      <div className="my-form">
+        <form onSubmit={onFormSubmit}>
+          <label>Task: </label>
+          <input
+            type="text"
+            name="name"
+            value={props.state.todoValue}
+            onChange={onValueChange}
+          />
 
-        <button className="clear-button" type="submit">
-          submit
+          <button type="submit">submit</button>
+        </form>
+      </div>
+
+      <div className="my-btn">
+        <button onClick={(event) => clearCompleted(event)}>
+          Clear completed
         </button>
-      </form>
-      <button
-        className="clear-button"
-        onClick={(event) => clearCompleted(event)}
-      >
-        Clear completed
-      </button>
+      </div>
     </div>
   );
 }
